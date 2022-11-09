@@ -10,7 +10,7 @@ form {
     display: grid;
     grid-template-columns:25% 50%;
     grid-row-gap: 20px;
-    color: black;
+    color: white;
 }
 
 .tituloTrabajadores{
