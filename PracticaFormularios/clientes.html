@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica Sistemas de la Información</title>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+</head>
+
+<header>
+    <div class="container">
+        <img src="logo.png" class="logo">
+        <h1 class="logo">
+            LA SUPERMODA
+        </h1>
+    </div>
+</header>
+
+    <body>
+        <form action="tabla.html">
+            <h1 class="tituloTrabajadores">Registro de Cliente</h1>
+            <label for="Nombre">Nombre*:</label><br>
+            <input required type="text" id="nombre"><br><br>
+            <label for="apellido1">Apellido1*:</label><br>
+            <input required type="text" id="apellido1"><br><br>
+            <label for="apellido2">Apellido2*:</label><br>
+            <input required type="text" id="apellido2"><br><br>
+            <label for="Correo">Correo Electronico*:</label><br>
+            <input required type="email" id="Correo"><br><br>
+            <label for="dni">DNI*:</label><br>
+            <input required pattern="[0-9]{8}[A-Za-z]" type="text" id="dni"><br><br>
+            <label for="direccion">Domicilio:</label><br>
+            <input type="text" id="Direccion"><br><br>
+            <label for="Telefono">Numero de Telefono:</label><br>
+            <input pattern="[0-9]" type="text" id="Telefono"><br><br>
+            <label for="color">Color favorito:</label><br>
+            <input type="text" id="color"><br><br>
+            <label for="Marca">Marca favorita:</label><br>
+            <input type="text" id="Marca"><br><br>
+            <label for="edad">Fecha Nacimiento:</label>
+            <input type="date" id="edad"><br><br>
+            <div class="submit">
+                <input type="submit" value="Enviar" id="enviar">
+            </div>
+        </form> 
+    </body>
+    </html>
