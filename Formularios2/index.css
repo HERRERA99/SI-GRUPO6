@@ -10,7 +10,7 @@ form {
     display: grid;
     grid-template-columns:25% 50%;
     grid-row-gap: 20px;
-    color: rgb(191, 79, 79);
+    color: black;
 }
 
 .tituloTrabajadores{
@@ -41,6 +41,7 @@ header .logo{
     font-weight: bold;
     font-size: 3em;
     color: blueviolet;
+    width: 100%;
 }
 
 header .container{
@@ -110,7 +111,7 @@ input[type=submit]{
 }
 
 .tabla{
-    text-align: center; margin: 0% auto; background-color:#bec1bf; border:solid 1px black;margin: 120px;
+    text-align: center; margin: 0% auto; background-color:#bec1bf; border:solid 1px black;
 }
 
 .fondo{

@@ -20,10 +20,10 @@
 			if(file_exists("trabajadores.xml")){
 				$trabajadores=simplexml_load_file("trabajadores.xml");
                 
-                echo"<table border=\"2\">";
-				echo"<tr><th>DNI</th><th>Nombre y apellidos</th><th>Fecha de nacimiento</th></th><th>Domicilio</th><th>Email</th><th>Contraseña</th><th>Trayectoría laboral</th><th>Puesto en la empresa</th><th>Foto del DNI</th><th>Grado de felicidad con la empresa</th></tr>";
-
-                foreach($trabajadores->trabajador as $trabajador){																	
+                echo "<table class=\"tabla\" border=\"1\" cellpading=\"7\" cellspacing=\"8\">";
+                echo"<tr> <td class=\"encabezadosTabla\"> DNI </td> <td class=\"encabezadosTabla\"> NOMBRE Y APELLIDOS </td> <td class=\"encabezadosTabla\"> FECHA DE NACIMIENTO </td> <td class=\"encabezadosTabla\"> DOMICILIO </td> <td class=\"encabezadosTabla\"> EMAIL </td> <td class=\"encabezadosTabla\"> CONTRASEÑA</td> <td class=\"encabezadosTabla\"> TRAYECTORIA LABORAL</td> <td class=\"encabezadosTabla\"> PUESTO EN LA EMPRESA </td> <td class=\"encabezadosTabla\"> FOTO PERSONAL</td> <td class=\"encabezadosTabla\"> SATISFACCIÓN CON LA EMPRESA</td>  </tr>";
+				
+                foreach($trabajadores->nuevoTrabajador as $trabajador){																	
                     echo"<tr><td>$trabajador[dni]</td><td>$trabajador->nombreApellidos</td><td>$trabajador->fechaNacimiento</td><td>$trabajador->domicilio</td><td>$trabajador->email</td><td>$trabajador->password</td><td>$trabajador->trayectoriaLaboral</td><td>$trabajador->puestoEmpresa</td><td>$trabajador->dniFoto</td><td>$trabajador->rango</td></tr>";									
 					
 				}
