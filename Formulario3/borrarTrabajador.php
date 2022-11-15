@@ -17,7 +17,7 @@
 </header>
 		
 	<body>
-		<div class="datosBorrado" style="margin:50px">
+		<div style="margin:50px">
 			<?PHP
 				
 				$dni=$_POST["dni"];
@@ -34,8 +34,11 @@
 							$encontrado=$contador;
 							echo"<p> Se encontró un trabajador con estos datos:</p>";
 							echo "<ul>";
-								echo "<li>Nombre y Apellidos: ".$trabajador->nombreApellidos."</li>";
-								echo "<li>DNI: ".$trabajador["dni"]."</li>";
+								echo "<li>Nombre y Apellidos: <b>".$trabajador->nombreApellidos."</b></li>";
+								echo "<li>DNI: <b>".$trabajador["dni"]."</b></li>";
+								echo "<li>Domicilio: <b>".$trabajador->domicilio."</b></li>";
+								echo "<li>Email: <b>".$trabajador->email."</b></li>";
+								echo "<li>Puesto en la empresa: <b>".$trabajador->puestoEmpresa."</b></li>";
 							echo "</ul>";
 						}
 					}
@@ -44,12 +47,16 @@
 							unset($trabajadores->nuevoTrabajador[$encontrado]);                        
 							if($trabajadores->asXML("trabajadores.xml")){
 								echo"<p>Se ha dado de baja al trabajador</p>";
+								echo "<form action=\"indexBorrarTrabajador.php\" style=\"padding-top: 20px\"><button>Borrar trabajador</button></form>";
+								echo "<form action=\"trabajador.php\" style=\"padding-top: 20px\"><button>Añadir trabajador</button></form>";
 							}else{
 								echo"<p>No se pudo actualizar el archivo</p>";
 							}
 						
 					}else{
-						echo"<p>No se ha encontrado ningún usuario con este DNI: $dni</p>";
+						echo"<p>No se ha encontrado ningún usuario con este DNI: <b>$dni</b></p>";
+						echo "<form action=\"indexBorrarTrabajador.php\" style=\"padding-top: 20px\"><button>Borrar trabajador</button></form>";
+						echo "<form action=\"trabajador.php\" style=\"padding-top: 20px\"><button>Añadir trabajador</button></form>";
 					}
 									
 					

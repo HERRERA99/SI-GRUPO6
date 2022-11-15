@@ -44,11 +44,14 @@
 						$encontrado=TRUE;
 						echo"<p>No se puede insertar el elemento. Se encontró un trabajador con estos datos:</p>";
 						echo "<ul>";
-							echo "<li>Nombre y Apellidos: ".$trabajador->nombreApellidos."</li>";
-							echo "<li>DNI: ".$trabajador["dni"]."</li>";
+							echo "<li>Nombre y Apellidos: <b>".$trabajador->nombreApellidos."</b></li>";
+							echo "<li>DNI: <b>".$trabajador["dni"]."</b></li>";
+							echo "<li>Domicilio: <b>".$trabajador->domicilio."</b></li>";
+							echo "<li>Email: <b>".$trabajador->email."</b></li>";
+							echo "<li>Puesto en la empresa: <b>".$trabajador->puestoEmpresa."</b></li>";
 						echo "</ul>";
-						echo"<p>Debe dar de baja al trabajador previamente si desea insertar uno con ese DNI</p>";
-						
+						echo "<form action=\"indexBorrarTrabajador.php\" style=\"padding-top: 30px\"><button>Borrar trabajador</button></form>";
+						echo "<form action=\"trabajador.php\" style=\"padding-top: 20px; padding-bottom: 15px\"><button>Añadir trabajador</button></form>";
 					}
 					
 				}	

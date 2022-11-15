@@ -1,5 +1,5 @@
 body{
-    margin: 100px;
+    margin: 0px;
     font-family: 'Roboto', sans-serif;
     padding-bottom: 200px;
     background-color: rgb(203, 203, 203);
@@ -124,11 +124,4 @@ input[type=submit]{
 
 .imagenPersonal{
     height: 108px; width: 110px;
-}
-
-div {
-    padding: 100px;
-    text-align: center;
-    align-items: center;
-    margin: 100px;
 }
