@@ -1,5 +1,5 @@
 body{
-    margin: 0;
+    margin: 100px;
     font-family: 'Roboto', sans-serif;
     padding-bottom: 200px;
     background-color: rgb(203, 203, 203);
@@ -111,7 +111,7 @@ input[type=submit]{
 }
 
 .tabla{
-    text-align: center; margin: 0% auto; background-color:#bec1bf; border:solid 1px black;
+    text-align: center; margin: 0%; background-color:#bec1bf; border:solid 1px black;
 }
 
 .fondo{
@@ -124,4 +124,11 @@ input[type=submit]{
 
 .imagenPersonal{
     height: 108px; width: 110px;
+}
+
+div {
+    padding: 100px;
+    text-align: center;
+    align-items: center;
+    margin: 100px;
 }

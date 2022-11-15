@@ -36,42 +36,23 @@
 			
 			
 			if(file_exists("trabajadores.xml")){
-				$encontrado=FALSE;
 				$trabajadores=simplexml_load_file("trabajadores.xml");
-
-				foreach($trabajadores->nuevoTrabajador as $trabajador){
-					if ($trabajador["dni"]==$dni){
-						$encontrado=TRUE;
-						echo"<p>No se puede insertar el elemento. Se encontró un trabajador con estos datos:</p>";
-						echo "<ul>";
-							echo "<li>Nombre y Apellidos: ".$trabajador->nombreApellidos."</li>";
-							echo "<li>DNI: ".$trabajador["dni"]."</li>";
-						echo "</ul>";
-						echo"<p>Debe dar de baja al trabajador previamente si desea insertar uno con ese DNI</p>";
-						
-					}
+				$nuevoTrabajador=$trabajadores->addchild("nuevoTrabajador");
+				$nuevoTrabajador->addchild("nombreApellidos",$nombreApellidos);
+				$nuevoTrabajador->addchild("fechaNacimiento",$fechaNacimiento);
+				$nuevoTrabajador->addchild("domicilio",$domicilio);
+                $nuevoTrabajador->addchild("email",$email);
+                $nuevoTrabajador->addchild("password",$password);
+                $nuevoTrabajador->addAttribute("dni",$dni);
+                $nuevoTrabajador->addchild("trayectoriaLaboral",$trayectoriaLaboral);
+                $nuevoTrabajador->addchild("puestoEmpresa",$puestoEmpresa);
+                $nuevoTrabajador->addchild("dniFoto",$dniFoto);
+                $nuevoTrabajador->addchild("rango",$rango);
+				if($trabajadores->asXML("trabajadores.xml")){
 					
-				}	
-
-				if(!$encontrado){	
-					$nuevoTrabajador=$trabajadores->addchild("nuevoTrabajador");
-					$nuevoTrabajador->addchild("nombreApellidos",$nombreApellidos);
-					$nuevoTrabajador->addchild("fechaNacimiento",$fechaNacimiento);
-					$nuevoTrabajador->addchild("domicilio",$domicilio);
-					$nuevoTrabajador->addchild("email",$email);
-					$nuevoTrabajador->addchild("password",$password);
-					$nuevoTrabajador->addAttribute("dni",$dni);
-					$nuevoTrabajador->addchild("trayectoriaLaboral",$trayectoriaLaboral);
-					$nuevoTrabajador->addchild("puestoEmpresa",$puestoEmpresa);
-					$nuevoTrabajador->addchild("dniFoto",$dniFoto);
-					$nuevoTrabajador->addchild("rango",$rango);
-					if($trabajadores->asXML("trabajadores.xml")){
-						
-					}else{
-						echo"<p>No se pudo actualizar el archivo</p>";
-					}
+				}else{
+					echo"<p>No se pudo actualizar el archivo</p>";
 				}
-
 			}else{
 				exit("No se pudo abrir el archivo usuarios.xml");
 			}
