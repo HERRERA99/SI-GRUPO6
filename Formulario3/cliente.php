@@ -23,50 +23,24 @@
 
             <label for="Nombre">Nombre*:</label><br>
             <input required type="text" name="nombre" id="nombre"><br><br>
-
             <label for="apellido1">Apellido1*:</label><br>
             <input required type="text" name="apellido1" id="apellido1"><br><br>
-
             <label for="apellido2">Apellido2*:</label><br>
             <input required type="text" name="apellido2" id="apellido2"><br><br>
-
             <label for="Correo">Correo Electronico*:</label><br>
             <input required type="email" name="correo" id="Correo"><br><br>
-
             <label for="dni">DNI*:</label><br>
             <input required pattern="[0-9]{8}[A-Za-z]" type="text" name="dni" id="dni"><br><br>
-
             <label for="direccion">Domicilio:</label><br>
             <input type="text" name="direccion" id="Direccion"><br><br>
-
             <label for="Telefono">Numero de Telefono:</label><br>
             <input pattern="[0-9]{9}" type="text" name="telefono" id="Telefono"><br><br>
-
             <label for="color">Color favorito:</label><br>
-            <select name="colorFav" id="color">
-                <option value="Rojo">ROJO</option>
-                <option value="Azul">AZUL</option>
-                <option value="Verde">VERDE</option>
-                <option value="Amarillo">AMARILLO</option>
-                <option value="Morado">MORADO</option>
-                <option value="Blanco">BLANCO</option>
-                <option value="Negro">NEGRO</option>
-            </select><br><br>
-
+            <input type="text" name="colorFav" id="color"><br><br>
             <label for="Marca">Marca favorita:</label><br>
-            <select name="marcaFav" id="Marca">
-                <option value="Adidas">ADIDAS</option>
-                <option value="Nike">NIKE</option>
-                <option value="Fila">FILA</option>
-                <option value="Volcom">VOLCOM</option>
-                <option value="Puma">PUMA</option>
-                <option value="Castore">CASTORE</option>
-                <option value="PepeJeans">PEPE-JEANS</option>
-            </select><br><br>
-
+            <input type="text" name="marcaFav" id="Marca"><br><br>
             <label for="edad">Fecha Nacimiento:</label>
             <input type="date" name="fechaNacimiento" id="edad"><br><br>
-            
             <div class="submit">
                 <input type="submit" value="Enviar" id="enviar">
             </div>
